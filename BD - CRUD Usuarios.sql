@@ -28,10 +28,22 @@ INSERT INTO UserType(id, value) VALUES
 
 DROP TABLE IF EXISTS Users;
 CREATE TABLE Users(
-	id INT NOT NULL PRIMARY KEY,
+	id INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
 	username VARCHAR(30) NOT NULL UNIQUE,
 	password VARCHAR(30) NOT NULL,
 	name VARCHAR(100) NOT NULL,
 	status INT NOT NULL REFERENCES UserStatus(id),
 	type INT NOT NULL REFERENCES UserType(id)
 );
+
+DECLARE
+	@username VARCHAR(30),
+	@password VARCHAR(30),
+	@name VARCHAR(100),
+	@status INT,
+	@type INT;
+
+INSERT INTO Users(username,password,name,status,type) VALUES
+('esteban','Ep1001995175','Esteban Padilla',1,1);
+
+SELECT * FROM Users;
