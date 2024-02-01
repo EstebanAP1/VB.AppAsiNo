@@ -1,4 +1,4 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class FrmUsuario
     Inherits System.Windows.Forms.Form
 
@@ -23,7 +23,6 @@ Partial Class FrmUsuario
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.TblContainer = New System.Windows.Forms.TableLayoutPanel()
-        Me.TblButtons = New System.Windows.Forms.TableLayoutPanel()
         Me.LblUsername = New System.Windows.Forms.Label()
         Me.LblPassword = New System.Windows.Forms.Label()
         Me.LblPasswordConfirm = New System.Windows.Forms.Label()
@@ -36,6 +35,7 @@ Partial Class FrmUsuario
         Me.TxtName = New System.Windows.Forms.TextBox()
         Me.CmbUserStatus = New System.Windows.Forms.ComboBox()
         Me.CmbUserType = New System.Windows.Forms.ComboBox()
+        Me.TblButtons = New System.Windows.Forms.TableLayoutPanel()
         Me.BtnInsert = New System.Windows.Forms.Button()
         Me.BtnDelete = New System.Windows.Forms.Button()
         Me.BtnUpdate = New System.Windows.Forms.Button()
@@ -63,7 +63,7 @@ Partial Class FrmUsuario
         Me.TblContainer.Controls.Add(Me.TxtName, 1, 3)
         Me.TblContainer.Controls.Add(Me.CmbUserStatus, 1, 4)
         Me.TblContainer.Controls.Add(Me.CmbUserType, 1, 5)
-        Me.TblContainer.Location = New System.Drawing.Point(144, 78)
+        Me.TblContainer.Location = New System.Drawing.Point(124, 25)
         Me.TblContainer.Name = "TblContainer"
         Me.TblContainer.RowCount = 6
         Me.TblContainer.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
@@ -74,28 +74,6 @@ Partial Class FrmUsuario
         Me.TblContainer.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
         Me.TblContainer.Size = New System.Drawing.Size(481, 203)
         Me.TblContainer.TabIndex = 0
-        '
-        'TblButtons
-        '
-        Me.TblButtons.ColumnCount = 6
-        Me.TblButtons.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
-        Me.TblButtons.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
-        Me.TblButtons.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
-        Me.TblButtons.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
-        Me.TblButtons.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
-        Me.TblButtons.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
-        Me.TblButtons.Controls.Add(Me.BtnInsert, 0, 0)
-        Me.TblButtons.Controls.Add(Me.BtnDelete, 1, 0)
-        Me.TblButtons.Controls.Add(Me.BtnUpdate, 2, 0)
-        Me.TblButtons.Controls.Add(Me.BtnSearchDr, 3, 0)
-        Me.TblButtons.Controls.Add(Me.BtnSearchDt, 4, 0)
-        Me.TblButtons.Controls.Add(Me.BtnClose, 5, 0)
-        Me.TblButtons.Location = New System.Drawing.Point(66, 313)
-        Me.TblButtons.Name = "TblButtons"
-        Me.TblButtons.RowCount = 1
-        Me.TblButtons.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TblButtons.Size = New System.Drawing.Size(639, 37)
-        Me.TblButtons.TabIndex = 1
         '
         'LblUsername
         '
@@ -153,7 +131,9 @@ Partial Class FrmUsuario
         '
         'TxtUsername
         '
+        Me.TxtUsername.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower
         Me.TxtUsername.Location = New System.Drawing.Point(243, 3)
+        Me.TxtUsername.MaxLength = 30
         Me.TxtUsername.Name = "TxtUsername"
         Me.TxtUsername.Size = New System.Drawing.Size(121, 20)
         Me.TxtUsername.TabIndex = 7
@@ -161,20 +141,26 @@ Partial Class FrmUsuario
         'TxtPassword
         '
         Me.TxtPassword.Location = New System.Drawing.Point(243, 36)
+        Me.TxtPassword.MaxLength = 30
         Me.TxtPassword.Name = "TxtPassword"
         Me.TxtPassword.Size = New System.Drawing.Size(121, 20)
         Me.TxtPassword.TabIndex = 8
+        Me.TxtPassword.UseSystemPasswordChar = True
         '
         'TxtPasswordConfirm
         '
         Me.TxtPasswordConfirm.Location = New System.Drawing.Point(243, 69)
+        Me.TxtPasswordConfirm.MaxLength = 30
         Me.TxtPasswordConfirm.Name = "TxtPasswordConfirm"
         Me.TxtPasswordConfirm.Size = New System.Drawing.Size(121, 20)
         Me.TxtPasswordConfirm.TabIndex = 9
+        Me.TxtPasswordConfirm.UseSystemPasswordChar = True
         '
         'TxtName
         '
+        Me.TxtName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxtName.Location = New System.Drawing.Point(243, 102)
+        Me.TxtName.MaxLength = 100
         Me.TxtName.Name = "TxtName"
         Me.TxtName.Size = New System.Drawing.Size(121, 20)
         Me.TxtName.TabIndex = 10
@@ -196,6 +182,28 @@ Partial Class FrmUsuario
         Me.CmbUserType.Name = "CmbUserType"
         Me.CmbUserType.Size = New System.Drawing.Size(121, 21)
         Me.CmbUserType.TabIndex = 12
+        '
+        'TblButtons
+        '
+        Me.TblButtons.ColumnCount = 6
+        Me.TblButtons.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
+        Me.TblButtons.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
+        Me.TblButtons.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
+        Me.TblButtons.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
+        Me.TblButtons.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
+        Me.TblButtons.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
+        Me.TblButtons.Controls.Add(Me.BtnInsert, 0, 0)
+        Me.TblButtons.Controls.Add(Me.BtnDelete, 1, 0)
+        Me.TblButtons.Controls.Add(Me.BtnUpdate, 2, 0)
+        Me.TblButtons.Controls.Add(Me.BtnSearchDr, 3, 0)
+        Me.TblButtons.Controls.Add(Me.BtnSearchDt, 4, 0)
+        Me.TblButtons.Controls.Add(Me.BtnClose, 5, 0)
+        Me.TblButtons.Location = New System.Drawing.Point(46, 260)
+        Me.TblButtons.Name = "TblButtons"
+        Me.TblButtons.RowCount = 1
+        Me.TblButtons.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TblButtons.Size = New System.Drawing.Size(639, 37)
+        Me.TblButtons.TabIndex = 1
         '
         'BtnInsert
         '
@@ -255,7 +263,7 @@ Partial Class FrmUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(727, 325)
         Me.Controls.Add(Me.TblButtons)
         Me.Controls.Add(Me.TblContainer)
         Me.Name = "FrmUsuario"
