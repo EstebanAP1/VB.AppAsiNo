@@ -35,15 +35,3 @@ CREATE TABLE Users(
 	status INT NOT NULL REFERENCES UserStatus(id),
 	type INT NOT NULL REFERENCES UserType(id)
 );
-
-DECLARE
-	@username VARCHAR(30),
-	@password VARCHAR(30),
-	@name VARCHAR(100),
-	@status INT,
-	@type INT;
-
-INSERT INTO Users(username,password,name,status,type) VALUES
-('esteban','Ep1001995175','Esteban Padilla',1,1);
-
-SELECT * FROM Users;
